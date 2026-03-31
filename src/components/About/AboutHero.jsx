@@ -4,7 +4,7 @@ import heroImg from "./AboutHeroimage.jpg";
 function AboutHero() {
   return (
     <>
-      <section className=" bg-orange-600">
+      <section className="bg-gradient-to-l from-orange-600 to-orange-400">
         <div className=" py-35 max-w-7xl mx-auto h-auto px-6 md:flex gap-30 ">
           {/* LEFT CONTENT */}
 
