@@ -5,6 +5,7 @@ import "./app.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Subscription from "./pages/Subscription";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/subscription" element={<h1>Subscription</h1>} />
+        <Route path="/subscription" element={<Subscription />} />
         <Route path="/contact" element={<h1>Contact</h1>} />
 
         {/* Compliance Pages */}
