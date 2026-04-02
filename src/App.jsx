@@ -8,6 +8,9 @@ import Services from "./pages/Services";
 import Subscription from "./pages/Subscription";
 import Contact from "./pages/Contact";
 import Disclaimer from "./pages/Disclaimer";
+import Privacy from "./pages/Privacy";
+import Refund from "./pages/Refund";
+import Terms from "./pages/Terms";
 function App() {
   return (
     <BrowserRouter>
@@ -22,9 +25,9 @@ function App() {
 
         {/* Compliance Pages */}
         <Route path="/disclaimer" element={<Disclaimer />} />
-        <Route path="/privacy-policy" element={<h1>Privacy Policy</h1>} />
-        <Route path="/refund-policy" element={<h1>Refund Policy</h1>} />
-        <Route path="/terms" element={<h1>Terms</h1>} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/refund-policy" element={<Refund />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
       <Footer />
     </BrowserRouter>
