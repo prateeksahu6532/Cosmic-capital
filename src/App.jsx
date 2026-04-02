@@ -6,7 +6,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Subscription from "./pages/Subscription";
-
+import Contact from "./pages/Contact";
+import Disclaimer from "./pages/Disclaimer";
 function App() {
   return (
     <BrowserRouter>
@@ -17,10 +18,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/subscription" element={<Subscription />} />
-        <Route path="/contact" element={<h1>Contact</h1>} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* Compliance Pages */}
-        <Route path="/disclaimer" element={<h1>Disclaimer</h1>} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/privacy-policy" element={<h1>Privacy Policy</h1>} />
         <Route path="/refund-policy" element={<h1>Refund Policy</h1>} />
         <Route path="/terms" element={<h1>Terms</h1>} />
