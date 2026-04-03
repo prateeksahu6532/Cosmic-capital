@@ -11,6 +11,7 @@ import Disclaimer from "./pages/Disclaimer";
 import Privacy from "./pages/Privacy";
 import Refund from "./pages/Refund";
 import Terms from "./pages/Terms";
+import Login from "./pages/Login";
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/subscription" element={<Subscription />} />

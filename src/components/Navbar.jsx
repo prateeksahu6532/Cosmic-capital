@@ -100,7 +100,7 @@ function Navbar() {
             </Link>
             {/* Login Button */}
             <button className="bg-[#CD7F32] text-white px-5 py-1.5 rounded-lg shadow-lg hover:scale-101">
-              Login
+              <Link to="/login"> Login</Link>
             </button>
           </div>
           {/* Mobile Menu Button */}
