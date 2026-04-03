@@ -36,6 +36,7 @@ function Login() {
   const handleSendOTP = () => {
     if (validateInput(input)) {
       console.log("OTP sent to:", input);
+      alert("OTP sent to: " + input);
       // Add your OTP sending logic here
     }
   };

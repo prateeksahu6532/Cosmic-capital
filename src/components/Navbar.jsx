@@ -13,7 +13,6 @@ function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <div>
-      {/*  Main colour code = Bronze	#CD7F32	205, 127, 50	30, 61, 50 */}
       <nav className="bg-white shadow-md fixed w-full z-50 text-gray-700">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
@@ -25,7 +24,7 @@ function Navbar() {
                 className="h-10 w-17  rounded-full object-contain bg-"
               />
             </Link>
-            <h1 className="text-2xl font-bold text-[#CD7F32]">
+            <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-orange-700 to-orange-400">
               <Link to="/">Cosmic Capital Research</Link>
             </h1>
           </div>
@@ -33,27 +32,27 @@ function Navbar() {
           <div className="hidden md:flex items-cente space-x-8 font-medium">
             <Link
               to="/"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <IoHome />
               Home
             </Link>
             <Link
               to="/about"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <MdRoundaboutRight /> About
             </Link>
             <Link
               to="/services"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <MdMiscellaneousServices />
               Services
             </Link>
             <Link
               to="/subscription"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <MdSubscriptions />
               Subscriptions
@@ -64,28 +63,31 @@ function Navbar() {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <button className="hover:text-[#CD7F32] pt-1.5 flex gap-1 items-center">
+              <button className="hover:text-orange-700 pt-1.5 flex gap-1 items-center">
                 <GrCompliance />
                 Compliance ⮟
               </button>
               {dropdownOpen && (
                 <div className=" block absolute top-8 left-0 bg-white shadow-lg rounded-lg w-52 p-4 space-y-3">
-                  <Link to="/disclaimer" className="block hover:text-[#CD7F32]">
+                  <Link
+                    to="/disclaimer"
+                    className="block hover:text-orange-700"
+                  >
                     Disclaimer
                   </Link>
                   <Link
                     to="/privacy-policy"
-                    className="block hover:text-[#CD7F32]"
+                    className="block hover:text-orange-700"
                   >
                     Privacy Policy
                   </Link>
                   <Link
                     to="/refund-policy"
-                    className="block hover:text-[#CD7F32]"
+                    className="block hover:text-orange-700"
                   >
                     Refund Policy
                   </Link>
-                  <Link to="/terms" className="block hover:text-[#CD7F32]">
+                  <Link to="/terms" className="block hover:text-orange-700">
                     Terms & Conditions
                   </Link>
                 </div>
@@ -93,13 +95,13 @@ function Navbar() {
             </div>
             <Link
               to="/contact"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <IoMdContact />
               Contact
             </Link>
             {/* Login Button */}
-            <button className="bg-[#CD7F32] text-white px-5 py-1.5 rounded-lg shadow-lg hover:scale-101">
+            <button className=" bg-linear-to-r from-orange-700 to-orange-400 text-white px-5 py-1.5 rounded-lg shadow-lg hover:scale-101">
               <Link to="/login"> Login</Link>
             </button>
           </div>
@@ -113,7 +115,7 @@ function Navbar() {
           <div className="md:hidden grid bg-white px-6 py-4 space-y-4">
             <Link
               to="/"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <IoHome />
               Home
@@ -121,35 +123,35 @@ function Navbar() {
 
             <Link
               to="/about"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <MdRoundaboutRight />
               About
             </Link>
             <Link
               to="/services"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <MdMiscellaneousServices />
               Services
             </Link>
             <Link
               to="/subscription"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <MdSubscriptions />
               Subscriptions
             </Link>
             <Link
               to="/contact"
-              className="hover:text-[#CD7F32] flex gap-1 items-center"
+              className="hover:text-orange-700 flex gap-1 items-center"
             >
               <IoMdContact />
               Contact
             </Link>
             {/* Mobile Dropdown */}
             <details>
-              <summary className=" hover:text-[#CD7F32] flex gap-1 items-center">
+              <summary className=" hover:text-orange-700 flex gap-1 items-center">
                 <GrCompliance />
                 Compliance ⮟
               </summary>
@@ -169,8 +171,8 @@ function Navbar() {
               </div>
             </details>
 
-            <button className="bg-[#CD7F32] text-white px-4 py-2 rounded w-full">
-              Login
+            <button className=" bg-linear-to-r from-orange-700 to-orange-400 text-white px-4 py-2 rounded w-full">
+              <Link to="/login"> Login</Link>
             </button>
           </div>
         )}

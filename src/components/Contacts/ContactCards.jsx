@@ -71,7 +71,7 @@ function ContactCards() {
         {/* Left side */}
         <div className="space-y-6">
           {/* 1. Contact card */}
-          <div className="bg-gradient-to-br from-orange-50 to-white border border-orange-300 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6">
+          <div className="bg-linear-to-br from-orange-50 to-white border border-orange-300 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6">
             <h2 className="text-xl font-bold mb-4">Kutch Capital Research</h2>
             <div className="space-y-3 text-sm text-gray-600">
               <div className="flex items-start gap-3">
@@ -106,7 +106,7 @@ function ContactCards() {
           </div>
 
           {/* 2. Business hours */}
-          <div className="bg-gradient-to-br from-orange-50 to-white border border-orange-300 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6">
+          <div className="bg-linear-to-br from-orange-50 to-white border border-orange-300 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6">
             <div className="flex items-center gap-2 mb-4">
               <FiClock className="text-orange-600" size={22} />
               <h2 className="text-xl font-bold">Business Hours</h2>
@@ -128,7 +128,7 @@ function ContactCards() {
           </div>
 
           {/* 3. Social */}
-          <div className="bg-gradient-to-br from-orange-50 to-white border border-orange-300 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6">
+          <div className="bg-linear-to-br from-orange-50 to-white border border-orange-300 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6">
             <h2 className="text-xl font-bold mb-4">Connect With Us</h2>
             <div className="flex flex-wrap gap-3">
               <a
@@ -166,7 +166,7 @@ function ContactCards() {
         </div>
 
         {/* Right side - Form */}
-        <div className="bg-gradient-to-br from-orange-50 to-white border border-orange-300 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6">
+        <div className="bg-linear-to-br from-orange-50 to-white border border-orange-300 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6">
           <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid gap-4">
