@@ -7,10 +7,13 @@ import { MdSubscriptions } from "react-icons/md";
 import { IoMdContact } from "react-icons/io";
 import { GrCompliance } from "react-icons/gr";
 import CosmicLogo from "./CosmicLogo.png";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { user, logout } = useContext(AuthContext);
   return (
     <div>
       <nav className="bg-white shadow-md fixed w-full z-50 text-gray-700">
@@ -101,9 +104,18 @@ function Navbar() {
               Contact
             </Link>
             {/* Login Button */}
-            <button className=" bg-linear-to-r from-orange-700 to-orange-400 text-white px-5 py-1.5 rounded-lg shadow-lg hover:scale-101">
-              <Link to="/login"> Login</Link>
-            </button>
+            {user ? (
+              <button
+                onClick={logout}
+                className="bg-linear-to-r from-orange-700 to-orange-400 text-white px-5 py-1.5 rounded-lg shadow-lg hover:scale-101"
+              >
+                Logout
+              </button>
+            ) : (
+              <button className="bg-linear-to-r from-orange-700 to-orange-400 text-white px-5 py-1.5 rounded-lg shadow-lg hover:scale-101">
+                <Link to="/login">Login</Link>
+              </button>
+            )}
           </div>
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -171,9 +183,18 @@ function Navbar() {
               </div>
             </details>
 
-            <button className=" bg-linear-to-r from-orange-700 to-orange-400 text-white px-4 py-2 rounded w-full">
-              <Link to="/login"> Login</Link>
-            </button>
+            {user ? (
+              <button
+                onClick={logout}
+                className="bg-linear-to-r from-orange-700 to-orange-400 text-white px-4 py-2 rounded w-full"
+              >
+                Logout
+              </button>
+            ) : (
+              <button className="bg-linear-to-r from-orange-700 to-orange-400 text-white px-4 py-2 rounded w-full">
+                <Link to="/login">Login</Link>
+              </button>
+            )}
           </div>
         )}
       </nav>

@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import CosmicLogo from "../components/CosmicLogo.png";
-
+import { AuthContext } from "../Context/AuthContext";
 function Login() {
   const [input, setInput] = useState("");
   const [errors, setErrors] = useState("");
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const validateInput = (value) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -35,8 +36,16 @@ function Login() {
 
   const handleSendOTP = () => {
     if (validateInput(input)) {
-      console.log("OTP sent to:", input);
-      alert("OTP sent to: " + input);
+      const userData = {
+        name: input.includes("@") ? input.split("@")[0] : "",
+        email: input.includes("@") ? input : "",
+        phone: input.includes("@") ? "" : input,
+        contact: input,
+      };
+
+      login(userData);
+      navigate("/");
+      alert("Login successful! OTP sent to " + input);
       // Add your OTP sending logic here
     }
   };
