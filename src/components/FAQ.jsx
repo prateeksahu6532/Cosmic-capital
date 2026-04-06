@@ -32,6 +32,16 @@ const faqData = [
     answer:
       "You can subscribe through our subscription page by selecting your preferred plan.",
   },
+  {
+    question: "How can I subscribe to your services?",
+    answer:
+      "You can subscribe through our subscription page by selecting your preferred plan.",
+  },
+  {
+    question: "Do you provide customer support?",
+    answer:
+      "Yes, we offer dedicated customer support to assist you with all your queries.",
+  },
 ];
 
 function FAQ() {
@@ -53,7 +63,7 @@ function FAQ() {
             </p>
           </div>
           {/* FAQ List */}
-          <div className="space-y-4 gap-8  grid md:grid-cols-2 mt-8">
+          <div className=" gap-12  grid md:grid-cols-2 mt-8">
             {faqData.map((item, index) => (
               <div
                 key={index}
